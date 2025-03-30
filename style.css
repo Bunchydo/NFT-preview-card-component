@@ -1,0 +1,212 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d1a2d;
+  min-width:400px;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    10. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --white-text: white;
+  --light-blue-text: #6980a1;
+}
+
+@font-face {
+  font-family: Outfit;
+  src: url(fonts/Outfit-VariableFont_wght.ttf);
+}
+
+.main-box {
+  height: 80%;
+  width: 27%;
+  background-color: #15273f;
+  color: var(--light-blue-text);
+  font-family: Outfit;
+  box-sizing: border-box;
+  padding: 2%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.first-box {
+  height: 60%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.second-box {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.first-row {
+  font-size: 22px;
+  font-weight: bolder;
+  letter-spacing: 1.3px;
+}
+
+.second-row {
+  font-size: 18px;
+}
+
+.third-row {
+  display: flex;
+  justify-content: space-between;
+}
+hr {
+  border: 0.2px solid var(--light-blue-text);
+}
+.leftside {
+  display: flex;
+  gap: 10px;
+  width: 40%;
+  font-size: 16px;
+  align-items: center;
+}
+
+.leftside img,
+.rightside img {
+  width: 20%;
+  height: 60%;
+}
+.rightside {
+  display: flex;
+  gap: 10px;
+  width: 40%;
+  font-size: 16px;
+  align-items: center;
+}
+
+.fourth-row {
+  display: flex;
+  gap: 6%;
+  align-items: center;
+  letter-spacing: 1.2px;
+}
+
+.fourth-row img {
+  width: 10%;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.white-text {
+  color: var(--white-text);
+}
+
+.bright-blue {
+  color: #1cc1c7;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+}
+
+@media screen and (max-width:1200px) {
+    .main-box {
+        height: 80%;
+        width: 37%;
+      
+      }
+    
+}
+
+@media screen and (max-width:800px) {
+    .main-box {
+        height: 80%;
+        width: 57%;
+      
+      }
+    
+}
+
+@media screen and (max-width:610px) {
+    .main-box {
+        height: 80%;
+        width: 77%;
+      
+      }
+    
+}
+
+@media screen and (max-width:420px) {
+    .main-box {
+        height: 80%;
+        width: 87%;
+      
+      }
+    
+}
